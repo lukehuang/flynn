@@ -119,6 +119,10 @@ apt-get update
 # install packages
 apt-get install -y postgresql-9.5 postgresql-contrib-9.5 redis-server mariadb-server percona-xtrabackup mongodb-org sudo net-tools
 
+pg_ctlcluster --skip-systemctl-redirect 9.5-main start
+sudo -u postgres createuser --superuser ubuntu
+pg_ctlcluster --skip-systemctl-redirect 9.5-main -m fast stop
+
 systemctl disable postgresql
 systemctl disable mysql
 systemctl disable mongod
