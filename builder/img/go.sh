@@ -58,6 +58,12 @@ goinstall \
   "a9cd0561f946ccbdbfdee5b9226659f9919a1ca8" \
   "/bin/godep"
 
+goinstall \
+  "github.com/flynn/go-tuf" \
+  "./cmd/tuf" \
+  "a98aea1463c972506e302344ebbfa30f85b74f2f" \
+  "/bin/tuf"
+
 mkdir -p "${GOPATH}/src/github.com/flynn"
 ln -nfs "$(pwd)" "${GOPATH}/src/github.com/flynn/flynn"
 
