@@ -78,6 +78,7 @@ echo deb https://apt.dockerproject.org/repo ubuntu-xenial main \
   > /etc/apt/sources.list.d/docker.list
 apt-get update
 apt-get install -y "docker-engine" "aufs-tools"
+systemctl disable docker
 
 apt-get update
 
