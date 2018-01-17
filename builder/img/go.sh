@@ -61,8 +61,14 @@ goinstall \
 goinstall \
   "github.com/flynn/go-tuf" \
   "./cmd/tuf" \
-  "a98aea1463c972506e302344ebbfa30f85b74f2f" \
+  "72382598c17ea4f727cb2db2ada99df027fd2d06" \
   "/bin/tuf"
+
+goinstall \
+  "github.com/flynn/go-tuf" \
+  "./cmd/tuf-client" \
+  "72382598c17ea4f727cb2db2ada99df027fd2d06" \
+  "/bin/tuf-client"
 
 mkdir -p "${GOPATH}/src/github.com/flynn"
 ln -nfs "$(pwd)" "${GOPATH}/src/github.com/flynn/flynn"
